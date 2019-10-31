@@ -15,5 +15,5 @@ jobs:
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACCESS_TOKEN }}
         PUBLISH_BRANCH: master
-        PUBLISH_DIR: build
+        PUBLISH_DIR: ./build
         BUILD_SCRIPT: npm install && npm run build
