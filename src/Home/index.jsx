@@ -25,6 +25,7 @@ export default class Home extends React.Component {
   }
 
   componentDidMount() {
+    document.title = '李敬知的小脚印'
     // 适配手机屏幕;
     enquireScreen((b) => {
       this.setState({ isMobile: !!b });
