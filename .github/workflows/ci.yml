@@ -11,9 +11,10 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build and Deploy
-      uses: peaceiris/actions-gh-pages@v2.5.0
+      uses: JamesIves/github-pages-deploy-action@master
       env:
-        PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        PUBLISH_BRANCH: master
-        PUBLISH_DIR: ./build
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BASE_BRANCH: src
+        BRANCH: master
+        FOLDER: build
         BUILD_SCRIPT: npm install && npm run build
