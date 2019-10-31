@@ -1,7 +1,7 @@
 import React from 'react';
-import { Icon } from 'antd';
+// import { Icon } from 'antd';
 import QueueAnim from 'rc-queue-anim';
-import TweenOne from 'rc-tween-one';
+// import TweenOne from 'rc-tween-one';
 import { isImg } from './utils';
 
 class Banner extends React.PureComponent {
@@ -33,7 +33,7 @@ class Banner extends React.PureComponent {
             {dataSource.button.children}
           </Button> */}
         </QueueAnim>
-        <TweenOne
+        {/* <TweenOne
           animation={{
             y: '-=20',
             yoyo: true,
@@ -44,7 +44,7 @@ class Banner extends React.PureComponent {
           key="icon"
         >
           <Icon type="down" />
-        </TweenOne>
+        </TweenOne> */}
       </div>
     );
   }
