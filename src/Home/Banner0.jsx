@@ -1,7 +1,7 @@
 import React from 'react';
-// import { Icon } from 'antd';
+import { Icon } from 'antd';
 import QueueAnim from 'rc-queue-anim';
-// import TweenOne from 'rc-tween-one';
+import TweenOne from 'rc-tween-one';
 import { isImg } from './utils';
 
 class Banner extends React.PureComponent {
@@ -20,11 +20,11 @@ class Banner extends React.PureComponent {
         >
           <div key="title" {...dataSource.title}>
             {typeof dataSource.title.children === 'string' &&
-            dataSource.title.children.match(isImg) ? (
-              <img src={dataSource.title.children} width="100%" alt="img" />
-            ) : (
-              dataSource.title.children
-            )}
+              dataSource.title.children.match(isImg) ? (
+                <img src={dataSource.title.children} width="100%" alt="img" />
+              ) : (
+                dataSource.title.children
+              )}
           </div>
           <div key="content" {...dataSource.content}>
             {dataSource.content.children}
@@ -33,7 +33,7 @@ class Banner extends React.PureComponent {
             {dataSource.button.children}
           </Button> */}
         </QueueAnim>
-        {/* <TweenOne
+        <TweenOne
           animation={{
             y: '-=20',
             yoyo: true,
@@ -43,8 +43,13 @@ class Banner extends React.PureComponent {
           className="banner0-icon"
           key="icon"
         >
-          <Icon type="down" />
-        </TweenOne> */}
+          <div className="banner0-copyright">
+            <span>Copyright <Icon type="copyright" /> 2020</span>
+            <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow noopener noreferrer">
+              <i className="banner0-gongani" />陕ICP备17014336号-2
+            </a>
+          </div>
+        </TweenOne>
       </div>
     );
   }
